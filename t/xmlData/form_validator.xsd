@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema 
+	xmlns:fv="form_validator"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="form_validator"
+	xml:lang="en">
+
+	<xsd:annotation>
+		<xsd:documentation>simple</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:complexType name="fv:Field">
+		<xsd:sequence>
+			<xsd:element name="Name" type="xsd:string" />
+			<xsd:element name="Value" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="Required" type="xsd:boolean" nillable="true" minOccurs="0"/>
+			<xsd:element name="ErrorString" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="Rules" type="fv:Rules" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="fv:Rule">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element name="Param" type="xsd:string" nillable="true" minOccurs="0"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" />
+	</xsd:complexType>
+
+	<xsd:complexType name="fv:Rules">
+		<xsd:element name="Rule" type="fv:Rule" />
+	</xsd:complexType>
+	
+	<xsd:element name="FieldArray">
+		<xsd:sequence maxOccurs="unbounded" minOccurs="1">
+			<xsd:element name="Field" type="fv:Field" />
+		</xsd:sequence>
+	</xsd:element>
+
+</xsd:schema>

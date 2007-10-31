@@ -1,0 +1,13 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/01Validator.t
+t/xmlData/form_validator.xsd
+t/xmlData/simpleOK.xml
+t/xmlData/simpleBAD.xml
+lib/AGAVA/AGE/Framework/Library/XML/XPath/Cached.pm
+lib/Validator.pm
+lib/Validator/ErrorCode.pm
+lib/Validator/Rules/Base.pm
+META.yml                                 Module meta-data (added by MakeMaker)

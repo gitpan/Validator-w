@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:FieldArray xmlns:p="simple"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="simple.xsd">
+	<Field>
+		<Name>Integer</Name>
+		<Value>1q</Value>
+		<Required>true</Required>
+		<ErrorString>Integer error</ErrorString>
+		<Rules>
+			<Rule name="integer"></Rule>
+			<Rule name="maxlength">
+				<Param>2</Param>
+			</Rule>
+		</Rules>
+	</Field>
+	<Field>
+		<Name>Integer</Name>
+		<Value>6</Value>
+		<Required>true</Required>
+		<ErrorString>Integer not in min max</ErrorString>
+		<Rules>
+			<Rule name="integer"></Rule>
+			<Rule name="maxlength">
+				<Param>3</Param>
+			</Rule>
+			<Rule name="minlength">
+				<Param>1</Param>
+			</Rule>
+		</Rules>
+	</Field>
+	<Field>
+		<Name>Pattern</Name>
+		<Value>Test string>></Value>
+		<Required>true</Required>
+		<Rules>
+			<Rule name="pattern">
+				<Param>^(Test string)$</Param>
+			</Rule>
+		</Rules>
+	</Field>
+	<Field>
+		<Name>IP</Name>
+		<Value>127.0.0.1111</Value>
+		<Required>true</Required>
+		<ErrorString>IP bad</ErrorString>
+		<Rules>
+			<Rule name="ip"></Rule>
+		</Rules>
+	</Field>
+	<Field>
+		<Name>IP</Name>
+		<Value>127.0.10.1000</Value>
+		<Required>true</Required>
+		<ErrorString>IP bad</ErrorString>
+		<Rules>
+			<Rule name="ip"></Rule>
+		</Rules>
+	</Field>
+	<Field>
+		<Name>TEXT</Name>
+		<Value>asds ФЫВ АПР ыывы $%^#></Value>
+		<Required>true</Required>
+		<ErrorString>Text bad</ErrorString>
+		<Rules>
+			<Rule name="anyText"></Rule>
+			<Rule name="maxlength">
+				<Param>3</Param>
+			</Rule>
+			<Rule name="minlength">
+				<Param>1</Param>
+			</Rule>
+		</Rules>
+	</Field>
+	<Field>
+		<Name>Equals</Name>
+		<Value>1</Value>
+		<Required>true</Required>
+		<ErrorString>Equals bad</ErrorString>
+		<Rules>
+			<Rule name="equals">
+				<Param>1sdfg</Param>
+			</Rule>
+		</Rules>
+	</Field>
+	<Field>
+		<Name>NOTEquals</Name>
+		<Value>1</Value>
+		<Required>true</Required>
+		<ErrorString>Equals bad</ErrorString>
+		<Rules>
+			<Rule name="notEquals">
+				<Param>1</Param>
+			</Rule>
+		</Rules>
+	</Field>
+</p:FieldArray>
+
